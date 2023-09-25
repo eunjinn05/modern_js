@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <header>
+        <!-- <script src='./syncSctipt.js'></script> -->
+    </header>
+    <body>
+        <div class="add_div">
+
+        </div>
+    </body>
+</html>
+
+<script>
+
+    // USING Promise =================================================
+    setting();
+
+    function addScript (src) {
+        return new Promise (resovle => {
+            let head = document.querySelector('head');
+            head.insertAdjacentHTML('afterbegin', '<script src= " ' + src + ' " >');
+        });
+    }
+
+    async function setting () {
+        await addScript('./syncSctipt.js');
+        addHtml();
+    }
+    // USING Promise =================================================
+
+
+
+    // NOT USING Promise =================================================
+    // setting();
+
+    // function addScript (src) {
+    //         let head = document.querySelector('head');
+    //         head.insertAdjacentHTML('afterbegin', '<script src= " ' + src + ' " >');
+    // }
+
+    // function setting () {
+    //     addScript('./syncSctipt.js');
+    //     addHtml();
+    // }
+
+    // NOT USING Promise =================================================
+</script>
