@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h2 id="number">0</h2>
+    <div>
+      <button id="increase">+1</button>
+      <button id="decrease" class="class">-1</button>
+    </div>
+  </body>
+</html>
+
+<script>
+    // 객체 가져오기
+    const number = document.getElementById('number');
+    const increase = document.getElementById('increase');
+    const decrease = document.getElementById('decrease');
+
+    console.log(number);
+    console.log(increase);
+    console.log(decrease);
+
+    increase.onclick = () => {
+        const current_num = parseInt(number.innerText, 10);
+        number.innerText = current_num + 1;
+    }
+
+    decrease.onclick = () => {
+        const current_num = parseInt(number.innerText, 10);
+        number.innerText = current_num - 1;
+    }
+
+</script>
